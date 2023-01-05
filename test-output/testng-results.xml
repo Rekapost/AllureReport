@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-04T03:19:08Z" name="Suite" finished-at="2023-01-04T03:19:37Z" duration-ms="29139">
+    <groups>
+    </groups>
+    <test started-at="2023-01-04T03:19:08Z" name="Test" finished-at="2023-01-04T03:19:37Z" duration-ms="29139">
+      <class name="login_Allure.LoginAllure">
+        <test-method signature="loginWithBothCorrect(java.lang.String, java.lang.String)[pri:0, instance:login_Allure.LoginAllure@47605f2f]" started-at="2023-01-04T03:19:08Z" name="loginWithBothCorrect" finished-at="2023-01-04T03:19:37Z" duration-ms="28890" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rekaharisri@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123///888''']]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBothCorrect -->
+      </class> <!-- login_Allure.LoginAllure -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
