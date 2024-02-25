@@ -15,20 +15,20 @@ public class LoginAllure {
 	@Parameters({"username","password"})
 	public void loginWithBothCorrect(String userName,String  passWord) {
 		//WebDriverManager.chromedriver().setup();
-		//System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
-		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Reka\\Drivers\\chromedriver.exe");
 		//WebDriverManager.chromedriver().clearDriverCache();
         //WebDriverManager.chromedriver().clearResolutionCache();
 		//WebDriverManager.chromedriver().browserVersion("110.0.0").setup();
 		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-		chromeOptions.setAcceptInsecureCerts(true);
-		chromeOptions.setScriptTimeout(Duration.ofSeconds(30));
-		chromeOptions.setPageLoadTimeout(Duration.ofMillis(30000));
-		chromeOptions.setImplicitWaitTimeout(Duration.ofSeconds(20));
+//		chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+//		chromeOptions.setAcceptInsecureCerts(true);
+//		chromeOptions.setScriptTimeout(Duration.ofSeconds(30));
+//		chromeOptions.setPageLoadTimeout(Duration.ofMillis(30000));
+//		chromeOptions.setImplicitWaitTimeout(Duration.ofSeconds(20));
 		chromeOptions.addArguments("--remote-allow-origins=*");	  
 		//driver =new ChromeDriver(chromeOptions);
 		WebDriver driver=new ChromeDriver(chromeOptions);
+		driver.manage().deleteAllCookies();
 		driver.get("https://practice.automationtesting.in/my-account/");
 		WebElement UsernameBox=driver.findElement(By.id("username"));
 		UsernameBox.sendKeys(userName);
@@ -40,4 +40,5 @@ public class LoginAllure {
 	}
 }
 //run the project in testnG.xml file 
-//cmd    allure serve C:\Users\Reka\eclipse-workspace\AllureReport\allure-results(pathof the allure-results folder) 
+// allure serve C:\Users\Reka\eclipse-workspace\AllureReport\allure-results
+//cmd    allure serve C:\Users\Reka\eclipse-workspace\AllureReport\(pathof the allure-results folder) 
